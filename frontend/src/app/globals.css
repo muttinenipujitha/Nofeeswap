@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-base: #1e1e2e;
+  --color-mantle: #181825;
+  --color-crust: #11111b;
+  --color-surface0: #313244;
+  --color-surface1: #45475a;
+  --color-surface2: #585b70;
+  --color-overlay0: #6c7086;
+  --color-text: #cdd6f4;
+  --color-subtext: #a6adc8;
+  --color-accent: #6366f1;
+  --color-green: #a6e3a1;
+  --color-red: #f38ba8;
+  --color-yellow: #f9e2af;
+  --color-blue: #89b4fa;
+  --color-mauve: #cba6f7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-base);
+  color: var(--color-text);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--color-mantle); }
+::-webkit-scrollbar-thumb { background: var(--color-surface1); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-surface2); }
+
+/* Kernel editor canvas */
+.kernel-canvas {
+  cursor: crosshair;
+  user-select: none;
+  touch-action: none;
+}
+
+.kernel-point {
+  cursor: grab;
+}
+
+.kernel-point:active {
+  cursor: grabbing;
+}
+
+/* Input styles */
+.dex-input {
+  @apply w-full bg-[#313244] border border-[#45475a] rounded-lg px-4 py-3
+    text-[#cdd6f4] placeholder-[#6c7086]
+    focus:outline-none focus:border-[#6366f1] focus:ring-1 focus:ring-[#6366f1]
+    transition-colors;
+}
+
+/* Card styles */
+.dex-card {
+  @apply bg-[#181825] border border-[#313244] rounded-xl p-6;
+}
+
+/* Button styles */
+.btn-primary {
+  @apply bg-[#6366f1] hover:bg-[#4f46e5] text-white font-semibold
+    px-6 py-3 rounded-xl transition-all duration-200
+    disabled:opacity-50 disabled:cursor-not-allowed
+    active:scale-[0.98];
+}
+
+.btn-secondary {
+  @apply bg-[#313244] hover:bg-[#45475a] text-[#cdd6f4] font-medium
+    px-4 py-2 rounded-lg transition-all duration-200
+    disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+/* TX status badge */
+.tx-pending { @apply text-[#f9e2af] bg-[#f9e2af]/10 border border-[#f9e2af]/30; }
+.tx-confirmed { @apply text-[#a6e3a1] bg-[#a6e3a1]/10 border border-[#a6e3a1]/30; }
+.tx-reverted { @apply text-[#f38ba8] bg-[#f38ba8]/10 border border-[#f38ba8]/30; }
+
+/* Tab styles */
+.tab-active {
+  @apply bg-[#6366f1]/20 text-[#6366f1] border-b-2 border-[#6366f1];
+}
+.tab-inactive {
+  @apply text-[#6c7086] hover:text-[#cdd6f4] border-b-2 border-transparent;
+}

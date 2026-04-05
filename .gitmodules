@@ -1,25 +1,7 @@
-[submodule "contracts/lib/nofeeswap-core"]
-	path = contracts/lib/nofeeswap-core
-	url = https://github.com/NoFeeSwap/core
-	shallow = true
-
-[submodule "contracts/lib/nofeeswap-operator"]
-	path = contracts/lib/nofeeswap-operator
-	url = https://github.com/NoFeeSwap/operator
-	shallow = true
-
-[submodule "contracts/lib/openzeppelin-contracts"]
-	path = contracts/lib/openzeppelin-contracts
-	url = https://github.com/OpenZeppelin/openzeppelin-contracts
-	shallow = true
-
-[submodule "contracts/lib/forge-std"]
-	path = contracts/lib/forge-std
-	url = https://github.com/foundry-rs/forge-std
-	shallow = true
 [submodule "lib/forge-std"]
 	path = lib/forge-std
 	url = https://github.com/foundry-rs/forge-std
+
 [submodule "lib/openzeppelin-contracts"]
 	path = lib/openzeppelin-contracts
 	url = https://github.com/OpenZeppelin/openzeppelin-contracts
